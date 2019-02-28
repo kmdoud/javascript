@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script lang = "javascript">
+    function poof()
+    {
+        var fnCtrl = document.getElementById("firstname");
+        var lnCtrl = document.getElementById("lastname");
+
+        var fnValue = fnCtrl.value;
+        var lnValue = lnCtrl.value;
+
+        var answerCtrl = document.getElementById("fullname");
+        answerCtrl.value = fnValue+ " " + lnValue;
+    }
+</script>
+</head>
+<body>
+
+    <input id= "firstname" type = "text">
+    <input id = "lastname" type = "text">
+    <button onclick="poof()">poof</button>
+    <input id = "fullname" type = "text">
+</body>
+</html>

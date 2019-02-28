@@ -3,16 +3,31 @@
 <head>
     <title>Index</title>
         <script lang = "javascript">
+            function add()
+            {
+                // pulling the id of the two operands
+                var opt1Ctrl = document.getElementById("opt1");
+                var opt2Ctrl = document.getElementById("opt2");
+                // setting what the value of the two opperands
+                var opt1Value = Number(opt1Ctrl.value);
+                var opt2Value = Number(opt2Ctrl.value);
+                //setting the "answer control" and the answer value by operating on the two perameters
+                var answerCtrl = document.getElementById("answer");
+                answerCtrl.value = opt1Value - opt2Value;
+            }
             function setDefault()
         {
 
-            
+
         var ctrl =document.getElementById("abc");
-        ctrl.value = "ABC";
+        //ctrl.value = "ABC";
         }
     </script>
 </head>
 <body onload = "setDefault();">
-    <input id = "abc" type="text">
+    <input id = "opt1" type = "number">
+    <input id = "opt2" type = "number">
+    <button onclick = "add();">Add</button>
+    <input id = "answer" type = "number">
 </body>
 </html>
