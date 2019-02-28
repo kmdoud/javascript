@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        var namesArray = ["albert","bob","cam","dennis","edward","frank","glen","hank","terri"];
+        function displayNames()
+       
+        {
+            var listCtrl = document.getElementById("names");
+            listCtrl.innerHTML = "";
+            for (var name of namesArray) //"of" instead of "in" like C#
+            {
+            var li = "<li>" + name + "</li>";
+            listCtrl.innerHTML += li;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h3>A list of Names</h3>
+    <ul id = "names">
+
+    </ul>
+    <p> 
+        <button onclick = "displayNames()">displayNames</button>
+    </p>
+</body>
+</html>

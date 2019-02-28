@@ -12,7 +12,7 @@
         var lnValue = lnCtrl.value;
 
         var answerCtrl = document.getElementById("fullname");
-        answerCtrl.value = fnValue+ " " + lnValue;
+        answerCtrl.innerText = fnValue+ " " + lnValue;
     }
 </script>
 </head>
@@ -21,6 +21,6 @@
     <input id= "firstname" type = "text">
     <input id = "lastname" type = "text">
     <button onclick="poof()">poof</button>
-    <input id = "fullname" type = "text">
+    <label id = "fullname"> </label>
 </body>
 </html>
